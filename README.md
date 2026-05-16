@@ -6,7 +6,7 @@ The original author quietsy seems to have started working with linuxserver.io an
 The text is now available at: [Securing Swag](https://www.linuxserver.io/blog/securing-swag)
 This write up lacks critical security features quietsy mentioned in earlier texts. Why? I don't know.
 This readme will just combine his steps for VPS Proxy and securing swag.
-So assume that all credit for write up and work goes to quietsy, I will indicate so otherwise. The code has changed so some configurations will be different. At the time of this README.md creation May 16th, 2026, I haven't changed any text yet.
+So assume that all credit for write up and work goes to quietsy, I will indicate so otherwise. The code has changed so some configurations will be different. At the time of this README.md creation May 16th, 2026, I have added a Clarification for the Internal Apps section of this guide.
 
 ---
 tags:
@@ -350,6 +350,10 @@ Use monitoring solutions such as [SWAG Dashboard](https://github.com/linuxserver
 - A lot of hits on status codes that are not 2xx
 
 ## Internal Applications
+
+## Clarification (not by quietsy)
+The internal applications step only applies if you use port forwarding with your HOME PUBLIC IP. I think.
+
 Internal applications can be proxied through SWAG in order to use `app.mydomain.com` instead of ip:port, and block them externally so only your local network could access them.
 
 Create a file called `nginx/internal.conf` with the following configuration:
